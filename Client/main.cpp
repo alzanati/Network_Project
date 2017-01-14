@@ -15,11 +15,20 @@ void error(const char *msg) {
     exit(1);
 }
 
+/**
+ *
+ * @param msg
+ * @return
+ */
 bool IsExit(const char* msg) {
     return msg[0] == 'e' && msg[1] == 'x' &&
     msg[2] == 'i' && msg[3] == 't';
 }
 
+/**
+ *
+ * @param buffer
+ */
 void TrimEnd (char* buffer) {
     int len = (int) strlen(buffer);
     if (len > 0 && buffer[len-1] == '\n')
