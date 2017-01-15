@@ -77,12 +77,12 @@ void Client(const char* port) {
     bzero(buffer, 256);
     fgets(buffer, 255, stdin);
 
-    /* Send message */
+    /* Send client name */
     n = (int) write(sockFd, buffer, strlen(buffer));
     if (n < 0)
         error("ERROR writing to socket");
 
-    /* Read clear buffer and read message */
+    /* Conversion */
     while (true) {
 
         /* Close connection */
